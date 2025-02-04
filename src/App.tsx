@@ -261,9 +261,9 @@ const App = () => {
         tyre: {
             widthMm: 245,
             aspectRatioPercentage: 35,
+            diameterInches: 19,
         },
         wheel: {
-            diameterInches: 19,
             widthInches: 9,
         }
     })
@@ -272,9 +272,9 @@ const App = () => {
         tyre: {
             widthMm: 265,
             aspectRatioPercentage: 35,
+            diameterInches: 19,
         },
         wheel: {
-            diameterInches: 19,
             widthInches: 10,
         }
     })
