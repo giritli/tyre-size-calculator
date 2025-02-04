@@ -154,8 +154,9 @@ const calculateOverallDiameter = (assembly: Assembly): number => {
 };
 
 const calculateAdjustedWidth = (tyreWidthMm: number, wheelWidth: number, idealWidth: number): number => {
-    const widthAdjustmentCoefficient = 0.25; // Empirical adjustment factor
-    return tyreWidthMm * (1 + widthAdjustmentCoefficient * ((wheelWidth - idealWidth) / idealWidth));
+    const stretchCoefficient = determineStretchCoefficient(wheelWidth, idealWidth);
+    const widthAdjustmentCoefficient = -0.05; // Empirical adjustment factor
+    return tyreWidthMm * (1 + stretchCoefficient * widthAdjustmentCoefficient);
 };
 
 const calculateTyreSpecs = (assembly: Assembly) => {
